@@ -8,11 +8,7 @@ let button = document.querySelector("#random");
 function aRandomColor() {
     return  "#" + Math.floor(Math.random()*16777215).toString(16);
 }
-
-//randomize starting Colors
-color1.value = aRandomColor();
-color2.value = aRandomColor();
-setGradient();
+getRandomColors();
 
 function setGradient() {
     body.style.background = "linear-gradient(to right," +   color1.value + "," +  color2.value + ")";    
@@ -20,10 +16,9 @@ function setGradient() {
 }
 
 function getRandomColors() {
-    color1.value = "#" + Math.floor(Math.random()*16777215).toString(16);
-    color2.value = "#" + Math.floor(Math.random()*16777215).toString(16);
+    color1.value = aRandomColor();
+    color2.value = aRandomColor();
     setGradient();
-    
 }
 
 color1.addEventListener("input", setGradient);
