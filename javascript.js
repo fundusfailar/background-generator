@@ -1,12 +1,17 @@
-let css = document.querySelector("h2");
+const h1 = document.querySelector("h1");
+const css = document.querySelector("h2");
 let color1 = document.querySelector("#color1");
 let color2 = document.querySelector("#color2");
 let body = document.querySelector("body");
 let button = document.querySelector("#random");
 
-//setzt Startfarben auf rot und gelb
-color1.value = "#ff0000";
-color2.value = "#ffff00";
+function aRandomColor() {
+    return  "#" + Math.floor(Math.random()*16777215).toString(16);
+}
+
+//randomize starting Colors
+color1.value = aRandomColor();
+color2.value = aRandomColor();
 setGradient();
 
 function setGradient() {
