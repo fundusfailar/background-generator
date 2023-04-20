@@ -1,0 +1,2 @@
+Das ist eine einfache Textdatei. 
+Sie kann jederzeit gelöscht werden. 
